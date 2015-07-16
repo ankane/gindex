@@ -1,6 +1,6 @@
 # Gindex
 
-:dash: Instant **concurrent indexes** for Rails
+:dash: Instant **concurrent** index migrations for Rails
 
 ```ruby
 rails g index users email
