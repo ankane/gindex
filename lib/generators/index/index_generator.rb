@@ -2,7 +2,9 @@ require "rails/generators/migration"
 
 class IndexGenerator < Rails::Generators::Base
   include Rails::Generators::Migration
+
   source_root File.expand_path("../templates", __FILE__)
+
   argument :table, type: :string
   argument :columns, type: :array
 
