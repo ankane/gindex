@@ -17,7 +17,7 @@ rails g index deliveries store_id delivered_at
 Add this line to your application’s Gemfile:
 
 ```ruby
-gem 'gindex'
+gem 'gindex', group: :development
 ```
 
 And then execute:
