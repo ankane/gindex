@@ -1,4 +1,4 @@
-# Gindex
+# g index
 
 :dash: Instant **concurrent** index migrations for Rails
 
