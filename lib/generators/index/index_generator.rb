@@ -21,4 +21,10 @@ class IndexGenerator < Rails::Generators::Base
   def copy_migration
     migration_template "index_migration.rb", "db/migrate/add_index_on_#{columns.join('_and_')}_to_#{table}.rb"
   end
+
+  def migration_version
+    if ActiveRecord::VERSION::MAJOR >= 5
+      "[#{ActiveRecord::VERSION::MAJOR}.#{ActiveRecord::VERSION::MINOR}]"
+    end
+  end
 end
