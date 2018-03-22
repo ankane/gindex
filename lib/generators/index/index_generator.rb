@@ -19,7 +19,8 @@ class IndexGenerator < Rails::Generators::Base
   end
 
   def copy_migration
-    migration_template "index_migration.rb", "db/migrate/add_index_on_#{columns.join('_and_')}_to_#{table}.rb"
+    migrate_path = ActiveRecord::Tasks::DatabaseTasks.migrations_paths.first
+    migration_template "index_migration.rb", "#{migrate_path}/add_index_on_#{columns.join('_and_')}_to_#{table}.rb"
   end
 
   def migration_version
