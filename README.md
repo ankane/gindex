@@ -2,13 +2,25 @@
 
 :speedboat: Instant **concurrent** index migrations for Rails
 
-```ruby
+```sh
 rails g index users email
+```
+
+generates:
+
+```ruby
+class AddIndexOnEmailToUsers < ActiveRecord::Migration[5.1]
+  disable_ddl_transaction!
+
+  def change
+    add_index :users, [:email], algorithm: :concurrently
+  end
+end
 ```
 
 Also works with multi-column indexes
 
-```ruby
+```sh
 rails g index deliveries store_id delivered_at
 ```
 
