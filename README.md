@@ -1,6 +1,6 @@
 # g index
 
-:dash: Instant **concurrent** index migrations for Rails
+:speedboat: Instant **concurrent** index migrations for Rails
 
 ```ruby
 rails g index users email
