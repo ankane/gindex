@@ -1,4 +1,4 @@
-## 0.2.0 [unreleased]
+## 0.2.0 (2019-12-20)
 
 - Added support for custom migrations path
 - Improved migration for single column
