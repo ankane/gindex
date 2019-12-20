@@ -15,4 +15,16 @@ class IndexGenerator < Rails::Generators::Base
   def migration_version
     "[#{ActiveRecord::VERSION::MAJOR}.#{ActiveRecord::VERSION::MINOR}]"
   end
+
+  def table_str
+    table.to_sym.inspect
+  end
+
+  def column_str
+    if columns.size == 1
+      columns.first.to_sym.inspect
+    else
+      columns.map(&:to_sym).inspect
+    end
+  end
 end
