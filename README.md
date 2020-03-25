@@ -32,12 +32,6 @@ Add this line to your application’s Gemfile:
 gem 'gindex', group: :development
 ```
 
-And then execute:
-
-```sh
-bundle
-```
-
 ## TODO
 
 - add `:name` option to long index names
@@ -50,3 +44,11 @@ Everyone is encouraged to help improve this project. Here are a few ways you can
 - Fix bugs and [submit pull requests](https://github.com/ankane/gindex/pulls)
 - Write, clarify, or fix documentation
 - Suggest or add new features
+
+To get started with development:
+
+```sh
+git clone https://github.com/ankane/gindex.git
+cd gindex
+bundle install
+```
