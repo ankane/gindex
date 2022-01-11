@@ -1,3 +1,7 @@
+## 0.3.0 (unreleased)
+
+- Dropped support for Ruby < 2.6 and Rails < 5.2
+
 ## 0.2.0 (2019-12-20)
 
 - Added support for custom migrations path
