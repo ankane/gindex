@@ -2,6 +2,16 @@
 
 :speedboat: Instant **concurrent** index migrations for Rails
 
+## Installation
+
+Add this line to your application’s Gemfile:
+
+```ruby
+gem "gindex", group: :development
+```
+
+## How It Works
+
 ```sh
 rails g index users email
 ```
@@ -24,17 +34,13 @@ Also works with multi-column indexes
 rails g index deliveries store_id delivered_at
 ```
 
-## Installation
-
-Add this line to your application’s Gemfile:
-
-```ruby
-gem 'gindex', group: :development
-```
-
 ## TODO
 
 - add `:name` option to long index names
+
+## History
+
+View the [changelog](https://github.com/ankane/gindex/blob/master/CHANGELOG.md)
 
 ## Contributing
 
