@@ -19,7 +19,7 @@ rails g index users email
 generates:
 
 ```ruby
-class AddIndexOnEmailToUsers < ActiveRecord::Migration[6.1]
+class AddIndexOnEmailToUsers < ActiveRecord::Migration[7.0]
   disable_ddl_transaction!
 
   def change
