@@ -1,1 +1,1 @@
-require "gindex/version"
+require_relative "gindex/version"
