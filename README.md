@@ -2,7 +2,7 @@
 
 :speedboat: Instant **concurrent** index migrations for Rails
 
-[![Build Status](https://github.com/ankane/gindex/workflows/build/badge.svg?branch=master)](https://github.com/ankane/gindex/actions)
+[![Build Status](https://github.com/ankane/gindex/actions/workflows/build.yml/badge.svg)](https://github.com/ankane/gindex/actions)
 
 ## Installation
 
