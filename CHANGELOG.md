@@ -15,3 +15,11 @@
 ## 0.1.2 (2018-03-22)
 
 - Added support for Rails 5
+
+## 0.1.1 (2015-07-16)
+
+- Moved generators to index directory
+
+## 0.1.0 (2015-07-16)
+
+- First release
