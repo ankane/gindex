@@ -55,4 +55,5 @@ To get started with development:
 git clone https://github.com/ankane/gindex.git
 cd gindex
 bundle install
+bundle exec rake test
 ```
