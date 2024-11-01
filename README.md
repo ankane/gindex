@@ -36,10 +36,6 @@ Also works with multi-column indexes
 rails g index deliveries store_id delivered_at
 ```
 
-## TODO
-
-- add `:name` option to long index names
-
 ## History
 
 View the [changelog](https://github.com/ankane/gindex/blob/master/CHANGELOG.md)
