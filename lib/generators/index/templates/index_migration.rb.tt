@@ -2,6 +2,6 @@ class <%= migration_class_name %> < ActiveRecord::Migration<%= migration_version
   disable_ddl_transaction!
 
   def change
-    add_index <%= table_str %>, <%= column_str %>, algorithm: :concurrently
+    add_index <%= table_str %>, <%= column_str %>, algorithm: :concurrently, if_not_exists: true
   end
 end
