@@ -9,16 +9,26 @@ class IndexGeneratorTest < Rails::Generators::TestCase
   setup :prepare_destination
 
   def test_one
-    ActiveRecord::Tasks::DatabaseTasks.stub(:migrations_paths, ["#{destination_root}/db/migrate"]) do
+    with_migrations_path do
       run_generator ["users", "email"]
     end
     assert_migration "db/migrate/add_index_on_email_to_users.rb", /add_index :users, :email, algorithm: :concurrently/
   end
 
   def test_many
-    ActiveRecord::Tasks::DatabaseTasks.stub(:migrations_paths, ["#{destination_root}/db/migrate"]) do
+    with_migrations_path do
       run_generator ["deliveries", "store_id", "delivered_at"]
     end
     assert_migration "db/migrate/add_index_on_store_id_and_delivered_at_to_deliveries.rb", /add_index :deliveries, \[:store_id, :delivered_at\], algorithm: :concurrently/
+  end
+
+  def with_migrations_path
+    previous_value = ActiveRecord::Tasks::DatabaseTasks.migrations_paths
+    begin
+      ActiveRecord::Tasks::DatabaseTasks.migrations_paths = ["#{destination_root}/db/migrate"]
+      yield
+    ensure
+      ActiveRecord::Tasks::DatabaseTasks.migrations_paths = previous_value
+    end
   end
 end
